@@ -106,7 +106,15 @@ module.exports = {
     },
 
 // Similalry functions need to be built for other calculators
-
+    
+// To calculate the net interest on the investments post-tax deductions. tax_slab is a percentile value to which the salary belongs to. If the employee falls under a higher tax slab, then the interest returned on the investment will be lower.
+    inv_tax: function (tax_slab) {
+        var fixed_interest_rate = 10;
+        var net_interest = 0;  
+        net_interest = fixed_interest_rate - (fixed_interest_rate * tax_slab);
+        
+        return net_interest;
+    },
 };
   
   
