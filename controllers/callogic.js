@@ -106,7 +106,30 @@ module.exports = {
     },
 
 // Similalry functions need to be built for other calculators
+module.exports = {
+    // Calculator 
+    inv_cal: function (num1, symbol, num2) {
+		var base_amount = 0;
+        if ( symbol == + ) {
+            base_amount = num1 + num2;
+        }
+        else if (symbol == -) {
+            base_amount = num1 - num2;               
+            }       
+        }
+        else if (symbol == *) {
+            base_amount = num1 * num2;              
+            }      
+        }
+        else if (symbol == /) {
+            base_amount = num1/num2;            
+            }   
+        }
 
+        var output = {
+            "output_value": base_amount
+        }
+        return output;
 };
   
   
