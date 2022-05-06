@@ -1,7 +1,7 @@
 # calculator_application
 
 ### Purpose 
-This is an open open source application that can help support various *Monetory Calculations* like **Budget, Investments, Loan, Savings,** etc.
+This is an open open source application that can help support various *Monetary Calculations* like **Budget, Investments, Loan, Savings,** etc.
 
 ### License
 This open source application comes with a *MIT License*.
