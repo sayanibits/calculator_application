@@ -17,6 +17,9 @@ app.get('/', (req, res) => {
 // getting investment proposed amount
 app.get('/cal_app/:salary/:age', apicall.inv_cal);
 
+// getting loan emi rates
+app.get('/emi_rate/:l_type', finserv.emi_rate);
+
 // Similar calls to be made for other calculators as per need
 
 app.use(function(req, res) {
