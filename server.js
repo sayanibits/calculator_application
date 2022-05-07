@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 // getting investment proposed amount
-app.get('/cal_app/:salary/:age', apicall.inv_cal);
+app.get('/cal_app/inv_cal/:salary/:age', apicall.inv_cal);
 
 // Similar calls to be made for other calculators as per need
 
