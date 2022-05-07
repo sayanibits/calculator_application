@@ -11,7 +11,7 @@ The application is develped using NodeJS and consists of various APIs to perfrom
 
 
 1. The ***Investment Calculator*** takes in the salary and age of an individual and proposes an amout the person should invest in differnet types of investment areas and projects an approximate compounded return in 5 years and compares this to Bank FDs as of the current interest rate.
-2. calculate simple intrest & Compund intrest on the investment.
+2. calculate simple intrest & Compund intrest on the investment
 
 ### Contribution
 Contirbutors are welcome to provide their feedback and also contribute further logics for different calculators.
