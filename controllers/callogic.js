@@ -105,6 +105,19 @@ module.exports = {
         return output;
     },
 
+    
+    // Determine Rate of interest and tenure based on loan category
+        emi_rate: function (l_type) {
+                
+            var output = {
+                "Rate_Pers_Loan": 10,
+                "Rate_Edu_Loan": 6,
+                "Rate_Home_Loan": 11,
+                "Rate_Auto_Loan": 12,
+            }
+            return output;
+        },
+    
 // Similalry functions need to be built for other calculators
 
 };
