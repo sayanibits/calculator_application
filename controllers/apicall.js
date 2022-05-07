@@ -8,5 +8,13 @@ exports.inv_cal = (req, res) =>{
     res.send(output);    
 }
 
+// route the call to emi rates and get the data to be sent to caller
+exports.emi_rate = (req, res) =>{
+    
+    var l_type = req.params.l_type; 
+    output = calculator.emi_rate(l_type); 
+    res.send(output);    
+}
+
 
 // similar routes to be written for other calculators
