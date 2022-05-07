@@ -15,3 +15,4 @@ The application is develped using NodeJS and consists of various APIs to perfrom
 
 ### Contribution
 Contirbutors are welcome to provide their feedback and also contribute further logics for different calculators.
+added API for getting loan emi details
