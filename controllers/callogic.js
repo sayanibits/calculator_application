@@ -118,7 +118,7 @@ module.exports = {
             return output;
         },
     
-// Similalry functions need to be built for other calculators
+// Similarly functions need to be built for other calculators
 
 };
   
