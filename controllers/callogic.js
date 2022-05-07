@@ -105,7 +105,18 @@ module.exports = {
         return output;
     },
 
-// Similalry functions need to be built for other calculators
+// To calculate the compound interest on the investments post-tax deductions.
+
+    inv_compound function  (principal, time, rate) {
+    // Display parameters values
+    console.log("Principal : " + principal);
+    console.log("Time : " + time);
+    console.log("Rate : " + rate);
+    // Calculate interest
+    var amount = principal * (Math.pow((1 + rate / 100),time));
+    // Display amount
+    console.log("Compound Interest : " + amount + "\n");
+},
 
 };
   
