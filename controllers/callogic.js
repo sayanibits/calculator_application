@@ -105,6 +105,48 @@ module.exports = {
         return output;
     },
 
+ // Calculate EMI 
+     emi_cal: function (l_type, loan_amnt, i_rate, i_time) {
+        
+        var loan_type;
+        switch (l_type) {
+            case 'P':
+                loan_type = "Personal Loan"
+                break;
+            case 'E':
+                loan_type = "Education Loan"
+                break;
+            case 'H':
+                loan_type = "Home Loan"
+                break;
+            case 'A':
+                loan_type = "Automobile Loan"
+                break;
+
+        }
+
+        var rate = i_rate / 1200 ;
+        
+        var n = i_time * 12;
+        
+        var rpown = Math.pow( (1 + rate), n);
+        
+		var num = ( loan_amnt * rate ) * rpown;
+        
+		var den = rpown - 1;
+        
+		var month_emi = Math.round( num / den );
+        
+        var output = {
+            "Loan_Type": loan_type,
+            "Principle_Amount": loan_amnt,
+            "Interest_Rate": i_rate,
+            "Tenure_Years": i_time,
+            "Cal_EMI": month_emi
+        }
+        return output;
+    },
+
   
     // Determine Rate of interest and tenure based on loan category
         emi_rate: function (l_type) {
@@ -129,6 +171,7 @@ module.exports = {
         },
           
 // Similarly functions need to be built for other calculators
+
 
 };
   
