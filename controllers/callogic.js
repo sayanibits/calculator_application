@@ -147,6 +147,32 @@ module.exports = {
         return output;
     },
 
+  
+    // Determine Rate of interest and tenure based on loan category
+        emi_rate: function (l_type) {
+                
+            var output = {
+                "Rate_Pers_Loan": 10,
+                "Rate_Edu_Loan": 6,
+                "Rate_Home_Loan": 11,
+                "Rate_Auto_Loan": 12,
+            }
+            return output;
+        },
+
+ 
+    // To calculate the net interest on the investments post-tax deductions. tax_slab is a percentile value to which the salary belongs to. If the employee falls under a higher tax slab, then the interest returned on the investment will be lower.
+        inv_tax: function (tax_slab) {
+            var fixed_interest_rate = 10;
+            var net_interest = 0;  
+            net_interest = fixed_interest_rate - (fixed_interest_rate * tax_slab);
+
+            return net_interest;
+        },
+          
+// Similarly functions need to be built for other calculators
+
+
 };
   
   

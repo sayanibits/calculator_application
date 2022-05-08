@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 // getting investment proposed amount
-app.get('/cal_app/:salary/:age', apicall.inv_cal);
+app.get('/cal_app/inv_cal/:salary/:age', apicall.inv_cal);
 
 // getting loan emi details
 app.get('/emi_cal/:l_type/:p_amount/:i_rate/:i_time', finserv.emi_cal);

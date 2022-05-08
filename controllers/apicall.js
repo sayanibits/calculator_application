@@ -15,7 +15,15 @@ exports.emi_cal = (req, res) =>{
     var loan_amnt = parseInt(req.params.p_amount);
     var i_rate = parseInt(req.params.i_rate);
     var i_time = parseInt(req.params.i_time);
-    output = calculator.emi_cal(l_type, loan_amnt, i_rate, i_time); 
+    output = callogic.emi_cal(l_type, loan_amnt, i_rate, i_time); 
+    res.send(output);    
+}
+
+// route the call to emi rates and get the data to be sent to caller
+exports.emi_rate = (req, res) =>{
+    
+    var l_type = req.params.l_type; 
+    output = callogic.emi_rate(l_type); 
     res.send(output);    
 }
 
