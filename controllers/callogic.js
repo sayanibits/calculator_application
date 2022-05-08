@@ -169,27 +169,27 @@ module.exports = {
 
             return net_interest;
         },
-          
-// Similarly functions need to be built for other calculators
 
- currency_convertor: function (amount, inputCurrencyAbbreviation) {
+    // Currency Calculator
+    currency_convertor: function (amount, inputCurrencyAbbreviation) {
      
      var inrValue = 0;
      switch(inputCurrencyAbbreviation) {
-  case "USD":
-    inrValue = amount * 72.1;
-    break;
-  case "CAD":
-     inrValue = amount * 61.34;
-    break;
-  case "AUD":
-     inrValue = amount * 54.46;
-    break;           
-  default:
-    inrValue = amount;
-}
- return inrValue;    
- }
+        case "USD":
+            inrValue = amount * 72.1;
+            break;
+        case "CAD":
+            inrValue = amount * 61.34;
+            break;
+        case "AUD":
+            inrValue = amount * 54.46;
+            break;           
+        default:
+            inrValue = amount;
+        }
+    return inrValue;    
+    },
+// Similarly functions need to be built for other calculators
 
 };
   
